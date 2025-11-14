@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Net</title>
+    <link rel="shortcut icon" type="image/jpg" href="../imagens/safylinkbranco.png"">
+    <link rel="stylesheet" href="../style3.css">
+</head>
+<body>
+    <h1>
+        <a href="/roteadoresstreet.html">
+    <img src="../imagens/logostreet/PNG/streetlogorosaescrito.png" width="210px" height="100px" alt="Logo StreetNet"/>
+        </a>
+</h1>
+    <div class="image-container">
+        <div class="image-item">
+            <h3>Ip para acesso ao equipamento <span class="highlight">192.168.18.1</span>
+                possivelmente vai está com o login antigo ainda (Epadmin/adminEp),<br>acesse com essa senha e se não quiser configurar
+                tudo na mão, vá até o final da página e baixe o firmware já todo configurado!</h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/pagina_inicial.png" alt="img1"/><br>
+            <h3>Assim que entrar no roteador, vai aparecer essa página.<br><br>
+                <span class="highlight">1.</span> Clique em "ADVANCED"</h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/home_page.png" alt="img2"/><br>
+            <h3>Clique em "WAN" para criar um perfil de configuração do cliente.<br><br>
+                <span class="highlight">1.</span> "NEW" para criar um perfil novo para o cliente.
+            </h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/wan_config.png" alt="img3"/><br>
+            <h3>Clicando em "New", vai abrir o campo abaixo<br><br>
+                <span class="highlight">1.</span>"Encapsulation Mode" deixe sempre em "PPPoE"<br>
+                <span class="highlight">2.</span>"Protocol Type" coloque a opção "IPv4/IPv6"<br>
+                <span class="highlight">3.</span>"Service Type" coloque sempre "TR069_VOIP_IPTV_INTERNET"<br>
+                "Enable VLAN" deixe ele habilitado, para você conseguir colocar uma VLAN no equipamento<br>
+                <span class="highlight">4.</span>"VLAN ID" coloque 100 se for a vlan informada pelo NOC<br>
+                <span class="highlight">5.</span>"MRU" coloque sempre "1480"<br>
+                <span class="highlight">6.</span>"Binding Options", set todas as LAN'S<br>
+                <span class="highlight">7.</span>"Binding Options", "SSID1" para habilitar o wifi 2.4, "SSID5" para habilitar o wifi 5G <br>
+                <span class="highlight">8.</span>"IP Acquisition Mode", sempre deixe setado "NONE"<br>
+            </h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/wan_config2.png" alt="img4"/><br>
+            <h3>Clique em LAN > Layer 2/3 Port, marque todas as opções paara conseguir habilitar elas em "WAN".<br>
+                Esse passo só vai ser necessário caso você não consiga selecionar elas em "WAN".<br>
+                Essa opção também serve para desabilitar uma porta que o cliente não queira que funcione. <br></h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/Lan_config.png" alt="img5"/><br>
+            <h3>Clique em "WLAN" para configurar o Wi-Fi do cliente.<br>
+                <span class="highlight">1.</span>"SSID NAME" nesse campo você colocar o nome do Wi-Fi que o cliente deseja.<br>
+                <span class="highlight">2.</span>"Authentication Mode", sempre coloque "WPA/WPA2 PreSharedKey"<br>
+            </h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/wifi_24g.png" alt="img5"/><br>
+            <h3> Clique em "5G Base Network", para configurar o Wi-Fi 5G.<br>
+                <span class="highlight">1.</span>"SSID NAME" nesse campo você colocar o nome do Wi-Fi que o cliente deseja.<br>
+                <span class="highlight">2.</span>"Number of Associated Devices" Aqui nesse campo você coloca a quantidade de pessoas que podem conectar no Wi-Fi.<br>
+                <span class="highlight">3.</span>"Authentication Mode", sempre coloque "WPA/WPA2 PreSharedKey"<br>
+                <span class="highlight">4.</span>"WPA PreSharedKey", nesse campo você coloca a senha do cliente.<br>
+            </h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/wifi_5g.png" alt="img5"/><br>
+            <h3> Clicando em "SECURITY", você vai em "PRECISE DEVICE"<br>
+                <span class="highlight">1.</span>"NEW" para criar um novo perfil.<br>
+            </h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/device_access_control.png" alt="img5"/><br>
+            <h3>
+                <span class="highlight">1.</span>"Enable precise device access control" deixe sempre habilitado.<br>
+                <span class="highlight">2.</span>"Priority" coloque o valor "1".<br>
+                <span class="highlight">3.</span>"Port Type" Selecione "WAN". <br>
+                <span class="highlight">4.</span>"WAN name" selecione o perfil da wan que você criou.<br>
+                <span class="highlight">5.</span>"Application" marque sempre "HTTP" e "ICMP".<br>
+                <span class="highlight">6.</span>"Mode" Permit
+                <span class="highlight">7.</span>"APPLY" para salvar as configurações feitas.<br><br>              
+            </h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/device_access_control1.png" alt="img5"/><br><br><br>
+            <h3> Ativação do Acesso Remoto <br><br><br>
+                <span class="highlight">1.</span>Clique em "System Management"<br>
+                <span class="highlight">2.</span>depois clique em "Account Management"<br>
+                <span class="highlight">3.</span>Clique em "User Name" para selecionar o perfil.<br>
+                <span class="highlight">4.</span>"Old Password" Escreve a Senha antiga "adminEp".<br>
+                <span class="highlight">5.</span>"New Password" Escreva a senha nova "Streetadmin1"<br>
+                <span class="highlight">6.</span>"Confirm Passaword" reescreva para confirmar a nova senha.<br>
+                <span class="highlight">7.</span>"Apply" para confirmar as configurações.<br><br><br>
+            </h3>
+                <img src="../imagens/roteadoresrj/eg8145v5/account_management.png" alt="img5"/><br>
+            <h3>Abaixo click a imagem para baixar o firmware configurado do aparelho.</h3>
+            <a href="https://uc5037e133f5acb109309cce3600.dl.dropboxusercontent.com/cd/0/get/C1JiVptQwLWLQ_p2c1ANgJPo_C-GUJzCu6JAPuIZIa4deo3kDusBcKAKpXT6opOo6VJdDvV9n6OtQH7KVte4LzGYC7f_Yv-iTNXK-uQ8vmdi7y7LQJ4BDa_UlFwBNoRetPHUcrskSS1T4M04Y8WTID4dKK0JDDxijLFSreVwjXEa-w/file?_download_id=4686111619586628793227768493575952621331546773588231522585832503&_log_download_success=1#ui.com" target="_blank">
+            <img src="../imagens/roteadoresrj/download.png" alt="img5" width="150" height="100"/>
+            </a>
+            <br>
+            </a>
+    </div>
+</body>
+</html>
